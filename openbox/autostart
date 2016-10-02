@@ -1,0 +1,6 @@
+xset -b
+tint2 &
+nm-applet &
+nitrogen --restore &
+setxkbmap pl
+
