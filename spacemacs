@@ -38,6 +38,7 @@ values."
      git
      gnus
      gtags
+     html
      javascript
      markdown
      latex
@@ -294,6 +295,9 @@ layers configuration. You are free to put any user code."
                                    auto-completion-enable-snippets-in-popup t)))
   (require 'cc-mode)
   (require 'semantic)
+  ;; sbt gen-ensime
+  ;; M-x ensime-server-update
+  (require 'ensime)
   (global-semanticdb-minor-mode 1)
   (global-semantic-idle-scheduler-mode 1)
   (semantic-mode 1)
@@ -301,4 +305,3 @@ layers configuration. You are free to put any user code."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
-
