@@ -54,7 +54,7 @@
   </item>
   <item label="Skype">
     <action name="Execute">
-      <command>skype</command>
+      <command>apulse32 skype</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
