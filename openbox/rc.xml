@@ -347,9 +347,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Firefox</name>
+          <name>Browser</name>
         </startupnotify>
-	<command>firefox</command>
+	<command>epiphany</command>
       </action>
     </keybind>
     <keybind key="W-i">
@@ -365,9 +365,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Chromium</name>
+          <name>Mail</name>
         </startupnotify>
-        <command>chromium</command>
+        <command>epiphany</command>
       </action>
     </keybind>
     <keybind key="W-h">
@@ -386,6 +386,15 @@
           <name>AlsaMixer</name>
         </startupnotify>
         <command>xterm -e alsamixer</command>
+      </action>
+    </keybind>
+    <keybind key="W-v">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>VirtualBox</name>
+        </startupnotify>
+        <command>virtualbox</command>
       </action>
     </keybind>
     <keybind key="W-q">
