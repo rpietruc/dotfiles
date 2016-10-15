@@ -28,9 +28,33 @@
 </menu>
 
 <menu id="apps-net-menu" label="Internet">
-  <item label="Browser">
+  <item label="Firefox">
+    <action name="Execute">
+      <command>firefox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Chromium">
+    <action name="Execute">
+      <command>chromium</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Epiphany">
     <action name="Execute">
       <command>epiphany</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Skype">
+    <action name="Execute">
+      <command>skype</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
