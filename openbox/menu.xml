@@ -44,14 +44,6 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Epiphany">
-    <action name="Execute">
-      <command>epiphany</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
   <item label="Skype">
     <action name="Execute">
       <command>apulse32 skype</command>
