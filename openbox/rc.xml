@@ -348,35 +348,17 @@
         <startupnotify>
           <enabled>true</enabled>
           <name>Browser</name>
-        </startupnotify>
-	<command>firefox</command>
-      </action>
-    </keybind>
-    <keybind key="W-i">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Eclipse</name>
-        </startupnotify>
-        <command>eclipse</command>
-      </action>
-    </keybind>
+        </startupnotify>otify>
+        <command>firefox</command>
+      </action>action>
+    </keybind>>
     <keybind key="W-m">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
           <name>Mail</name>
         </startupnotify>
-        <command>chromium</command>
-      </action>
-    </keybind>
-    <keybind key="W-h">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>HTop</name>
-        </startupnotify>
-        <command>xterm -e htop</command>
+        <command>chromium-browser</command>
       </action>
     </keybind>
     <keybind key="W-a">
@@ -386,24 +368,6 @@
           <name>AlsaMixer</name>
         </startupnotify>
         <command>xterm -e alsamixer</command>
-      </action>
-    </keybind>
-    <keybind key="W-v">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>VirtualBox</name>
-        </startupnotify>
-        <command>virtualbox</command>
-      </action>
-    </keybind>
-    <keybind key="W-q">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>QtCreator</name>
-        </startupnotify>
-        <command>qtcreator</command>
       </action>
     </keybind>
     <keybind key="W-l">
@@ -416,6 +380,16 @@
         <command>xterm -e alsamixer</command>
       </action>
     </keybind>
+    <keybind key="W-w">
+      <action name="Execute">
+        <command>xscreensaver-command -lock</command>
+      </action>
+    </keybind>
+    <keybind key="W-r">
+      <action name="Execute">
+        <command>remmina</command>
+      </action>
+    </keybind>
     <keybind key="W-space">
       <action name="ShowMenu">
         <menu>root-menu</menu>
@@ -425,7 +399,7 @@
       <action name="ToggleMaximize"/>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
-      <action name="Execute"> 
+      <action name="Execute">
         <command>amixer set Master 10%+</command>
       </action>
     </keybind>
@@ -435,7 +409,7 @@
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
-      <action name="Execute"> 
+      <action name="Execute">
         <command>amixer set Master toggle</command>
       </action>
     </keybind>
@@ -828,7 +802,7 @@
   # order that they appear in this list
 
 
-    # each rule element can be left out or set to 'default' to specify to not 
+    # each rule element can be left out or set to 'default' to specify to not
     # change that attribute of the window
 
     <decor>yes</decor>

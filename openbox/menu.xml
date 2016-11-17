@@ -38,15 +38,7 @@
   </item>
   <item label="Chromium">
     <action name="Execute">
-      <command>chromium</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Skype">
-    <action name="Execute">
-      <command>apulse32 skype</command>
+      <command>chromium-browser</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -109,60 +101,6 @@
       <command>xterm -e alsamixer</command>
     </action>
   </item>
-  <item label="Brasero">
-    <action name="Execute">
-      <command>brasero</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="SMPlayer">
-    <action name="Execute">
-      <command>smplayer</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-</menu>
-
-<menu id="apps-devel-menu" label="Development">
-  <item label="QtCreator">
-    <action name="Execute">
-      <command>qtcreator</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Eclipse">
-    <action name="Execute">
-      <command>eclipse</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-</menu>
-
-<menu id="apps-graphics-menu" label="Graphics">
-  <item label="Gimp">
-    <action name="Execute">
-      <command>gimp</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Blender">
-    <action name="Execute">
-      <command>blender</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
 </menu>
 
 <menu id="apps-accessories-menu" label="Accessories">
@@ -172,17 +110,17 @@
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
+  <item label="XScreenSaver">
+    <action name="Execute">
+      <command>xscreensaver-command -prefs</command>
+    </action>
+  </item>
 </menu>
 
 <menu id="system-menu" label="System">
-  <item label="VirtualBox">
+  <item label="RemoteDesktop">
     <action name="Execute">
-      <command>virtualbox</command>
-    </action>
-  </item>
-  <item label="HTop">
-    <action name="Execute">
-      <command>xterm -e htop</command>
+      <command>remmina</command>
     </action>
   </item>
   <item label="Openbox Configuration Manager">
@@ -214,8 +152,6 @@
   <menu id="apps-fileman-menu"/>
   <menu id="apps-office-menu"/>
   <menu id="apps-multimedia-menu"/>
-  <menu id="apps-devel-menu"/>
-  <menu id="apps-graphics-menu"/>
   <menu id="apps-accessories-menu"/>
   <separator label="System" />
   <menu id="system-menu"/>

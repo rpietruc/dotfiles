@@ -2,5 +2,5 @@ xset -b
 tint2 &
 nm-applet &
 nitrogen --restore &
+xscreensaver &
 setxkbmap pl
-

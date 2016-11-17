@@ -301,6 +301,7 @@ layers configuration. You are free to put any user code."
   (global-semanticdb-minor-mode 1)
   (global-semantic-idle-scheduler-mode 1)
   (semantic-mode 1)
+  (send-mail-function (quote message-send-mail-with-sendmail))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
