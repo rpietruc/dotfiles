@@ -33,20 +33,34 @@ ex ()
 }
 
 # pacman
-alias yu='sudo apt-get update && sudo apt-get upgrade'
+function yu {
+  if $(which apt-get >/dev/null); then sudo apt-get update && sudo apt-get upgrade;
+  elif $(which yaourt >/dev/null);  then yaourt -Syu; fi
+}
+function ya { pacman -Qqdt | sed ':a;N;$!ba;s/\n/ /g'; }
+function yc {
+  if $(which apt-get >/dev/null); then sudo apt-get autoremove;
+  elif $(which yaourt >/dev/null);  then yaourt -R $(echo $(ya)); fi
+}
 alias yc='sudo apt-get autoremove'
 function yf {
-  apt-cache search "$@"
+  if $(which apt-cache >/dev/null); then apt-cache search "$@";
+  elif $(which yaourt >/dev/null);  then yaourt "$@"; fi
 }
 function yr {
-  sudo apt-get remove "$@"
+  if $(which apt-get >/dev/null); then sudo apt-get remove "$@";
+  elif $(which yaourt >/dev/null);  then yaourt -R "$@"; fi
 }
 function yi {
-  sudo apt-get install "$@"
+  if $(which apt-get >/dev/null); then sudo apt-get install "$@";
+  elif $(which yaourt >/dev/null);  then yaourt -S "$@"; fi
 }
 function yl {
-  dpkg-query -L "$1"
+  if $(which dpkg-query >/dev/null); then dpkg-query -L "$@";
+  elif $(which yaourt >/dev/null);  then yaourt -Ql "$@"; fi
 }
+function yo { yaourt -Qo "$1"; }
+function pkg_ver { yaourt -Q "$1" | sed "s/\(.*\) \(1\?:\?\)\(.*\)-1/\3/"; }
 
 # cscope
 function cscope_add {
