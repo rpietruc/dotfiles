@@ -1,6 +1,8 @@
 HISTSIZE=10000
 HISTFILESIZE=20000
 
+PATH=~/bin:$PATH
+
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
@@ -31,7 +33,7 @@ ex ()
 }
 
 # pacman
-alias yu='sudo apt-get update'
+alias yu='sudo apt-get update && sudo apt-get upgrade'
 alias yc='sudo apt-get autoremove'
 function yf {
   apt-cache search "$@"
@@ -41,6 +43,9 @@ function yr {
 }
 function yi {
   sudo apt-get install "$@"
+}
+function yl {
+  dpkg-query -L "$1"
 }
 
 # vim

@@ -358,7 +358,7 @@
           <enabled>true</enabled>
           <name>Mail</name>
         </startupnotify>
-        <command>chromium-browser</command>
+        <command>thunderbird</command>
       </action>
     </keybind>
     <keybind key="W-a">
@@ -368,6 +368,15 @@
           <name>AlsaMixer</name>
         </startupnotify>
         <command>xterm -e alsamixer</command>
+      </action>
+    </keybind>
+    <keybind key="W-q">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>QtCreator</name>
+        </startupnotify>
+        <command>qtcreator</command>
       </action>
     </keybind>
     <keybind key="W-l">

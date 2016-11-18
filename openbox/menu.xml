@@ -27,8 +27,19 @@
   </item>
 </menu>
 
+<menu id="apps-devel-menu" label="Development">
+  <item label="QtCreator">
+    <action name="Execute">
+      <command>qtcreator</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
 <menu id="apps-net-menu" label="Internet">
-  <item label="Firefox">
+  <item label="Browser">
     <action name="Execute">
       <command>firefox</command>
       <startupnotify>
@@ -36,9 +47,9 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Chromium">
+  <item label="Mail">
     <action name="Execute">
-      <command>chromium-browser</command>
+      <command>thunderbird</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
