@@ -112,6 +112,45 @@
       <command>xterm -e alsamixer</command>
     </action>
   </item>
+
+  <item label="SMPlayer">
+    <action name="Execute">
+      <command>smplayer</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-devel-menu" label="Development">
+  <item label="QtCreator">
+    <action name="Execute">
+      <command>qtcreator</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Eclipse">
+    <action name="Execute">
+      <command>eclipse</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-graphics-menu" label="Graphics">
+  <item label="Gimp">
+    <action name="Execute">
+      <command>gimp</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
 </menu>
 
 <menu id="apps-accessories-menu" label="Accessories">
