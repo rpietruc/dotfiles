@@ -48,12 +48,31 @@ function yl {
   dpkg-query -L "$1"
 }
 
-# vim
-function vim_make_cproj {
-  # Create a file which contains the list of files you wish cscope to index
-  # (cscope can handle many languages but this example finds .c, .cpp and .h files, specific for C/C++ project): 
-  find . -type f -print | grep -E '\.(c(pp)?|h)$' > cscope.files
-  # Create database files that cscope will read:
-  cscope -bq
+# cscope
+function cscope_add {
+  if [ -z "$1" ]; then
+    echo "usage: cscope_add <include path>"
+  else
+    # Create a file which contains the list of files you wish cscope to index
+    # (cscope can handle many languages but this example finds .c, .cpp and .h files, specific for C/C++ project): 
+    find "$1" -type f -print | grep -E '\.(c(pp)?|h)$' >> cscope.files
+    # Create database files that cscope will read:
+    cscope -bq
+  fi
 }
 
+function makefile_template {
+  echo '# makefile template
+CC=g++
+CPPFLAGS=-std=c++11
+DEPS = main.h
+OBJS = main.o
+EXE = main
+
+%.o: %.cpp $(DEPS)
+	$(CC) -c -o $@ $< $(CPPFLAGS)
+
+$(EXE): $(OBJS)
+	$(CC) -o $@ $^ $(CPPFLAGS)
+  '
+}
