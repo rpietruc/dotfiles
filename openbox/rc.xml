@@ -379,6 +379,15 @@
         <command>qtcreator</command>
       </action>
     </keybind>
+    <keybind key="W-s">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Skype</name>
+        </startupnotify>
+        <command>apulse32 skype</command>
+      </action>
+    </keybind>
     <keybind key="W-l">
       <action name="Exit">
         <prompt>yes</prompt>

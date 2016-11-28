@@ -76,11 +76,11 @@ function cscope_add {
 }
 
 function makefile_template {
-  echo '# makefile template
-CC=g++
-CPPFLAGS=-std=c++11
-LDFLAGS=
-DEPS = main.h
+cat << "EOF"
+CC = g++
+CPPFLAGS = -g -std=c++11
+LDLAGS = -g
+DEPS =
 OBJS = main.o
 EXE = main
 
@@ -92,6 +92,61 @@ $(EXE): $(OBJS)
 
 clean:
 	rm -f $(EXE) $(OBJS)
-  '
+EOF
 }
 
+function main_template {
+cat << EOF
+#include <iostream>
+
+auto main(int argc, char *argv[]) -> int {
+     using namespace std;
+     cout << endl;
+     return 0;
+}
+EOF
+}
+
+function header_template {
+cat << EOF
+#ifndef ${1^^}_H
+#define ${1^^}_H
+
+class $1
+{
+public:
+    explicit $1();
+    virtual ~$1();
+};
+
+#endif // ${1^^}_H
+EOF
+}
+
+function source_template {
+cat << EOF
+#include "${1,,}.h"
+
+$1::$1()
+{
+}
+
+$1::~$1()
+{
+}
+EOF
+}
+
+function project_template {
+    if [ ! -f Makefile ]; then makefile_template > Makefile; fi
+    if [ ! -f main.cpp ]; then main_template > main.cpp; fi
+}
+
+function class_template {
+    if [ ! -z $1 ]; then
+        if [ ! -f ${1,,}.h ]; then header_template $1 > ${1,,}.h; fi
+        if [ ! -f ${1,,}.cpp ]; then source_template $1 > ${1,,}.cpp; fi
+        sed -i "/^DEPS/ s/\$/ ${1,,}.h/" Makefile
+        sed -i "/^OBJS/ s/\$/ ${1,,}.o/" Makefile
+    fi
+}
