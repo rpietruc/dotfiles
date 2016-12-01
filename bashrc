@@ -1,7 +1,7 @@
 HISTSIZE=10000
 HISTFILESIZE=20000
 
-PATH=~/bin:$PATH
+PATH="~/build/cling_2016-11-24_ubuntu16/bin:$PATH"
 
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
@@ -65,6 +65,7 @@ function makefile_template {
   echo '# makefile template
 CC=g++
 CPPFLAGS=-std=c++11
+LDFLAGS=
 DEPS = main.h
 OBJS = main.o
 EXE = main
@@ -73,6 +74,10 @@ EXE = main
 	$(CC) -c -o $@ $< $(CPPFLAGS)
 
 $(EXE): $(OBJS)
-	$(CC) -o $@ $^ $(CPPFLAGS)
+	$(CC) $(LDFLAGS) -o $@ $^ $(CPPFLAGS)
+
+clean:
+	rm -f $(EXE) $(OBJS)
   '
 }
+
