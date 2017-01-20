@@ -21,3 +21,6 @@ au FileType c,cpp set expandtab
 au FileType c set sw=2 ts=2
 au FileType cpp set sw=4 ts=4
 
+" git log requirement
+set textwidth=72
+

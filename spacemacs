@@ -264,7 +264,9 @@ in `dotspacemacs/user-config'."
   ;; "python": What Python developers use for extension modules
   ;; "java": The default style for java-mode (see below)
   ;; "user": When you want to define your own style
-  (setq c-default-style "java")
+  (setq c-default-style
+        '((c-mode . "gnu")
+          (other . "java")))
   ;;
   ;; Default file destination when copy - another opened dired buffer
   ;; http://emacs.stackexchange.com/questions/5603/how-to-quickly-copy-move-file-in-emacs-dired
