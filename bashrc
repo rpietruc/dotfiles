@@ -132,7 +132,7 @@ test: $(TESTS)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 main: src/main.o ${OBJS}
-	${LD} -o $@ ${LDFLAGS} src/main.o ${OBJS}
+	${LD} -o $@ src/main.o ${OBJS} ${LDFLAGS}
 
 clean:
 	rm -f ${OBJS} src/main.o main ${TEST_OBJS} test/test_main.o ${TESTS}
@@ -230,7 +230,7 @@ extern "C" {
   typedef struct _$1 T$1;
 
   T$1* ${1,,}_constructor();
-  void ${1,,}_destructor(T$1* ${1,,});
+  void ${1,,}_destructor(T$1 *self);
 
 #if defined(__cplusplus) || defined(__cplusplus__)
 }
@@ -254,13 +254,15 @@ struct _$1 {
 
 T$1* ${1,,}_constructor()
 {
-  T$1* ${1,,} = (T$1*)malloc(sizeof(T$1));
-  return ${1,,};
+  T$1* self = (T$1*)malloc(sizeof(T$1));
+  if (self) {
+  }
+  return self;
 }
 
-void ${1,,}_destructor(T$1 *${1,,})
+void ${1,,}_destructor(T$1 *self)
 {
-  free(${1,,});
+  free(self);
 }
 EOF
   fi
@@ -332,7 +334,9 @@ function check_source {
 
 START_TEST(test_$2)
 {
+  T$1 *self = ${1,,}_constructor();
   ck_assert_msg(0 == 1, "Test should be defined");
+  ${1,,}_destructor(self);
 }
 END_TEST
 
@@ -402,7 +406,7 @@ function test_new {
     echo "usage: test_new <class_name>"
   else
     sed -i "/^TESTS=/ s/\$/ test_${1,,}/" Makefile
-    printf '\n%s: %s ${TEST_OBJS} ${OBJS}\n\t${LD} -o $@ ${LDFLAGS} %s ${TEST_OBJS} ${OBJS}\n' \
+    printf '\n%s: %s ${TEST_OBJS} ${OBJS}\n\t${LD} -o $@ %s ${TEST_OBJS} ${OBJS} ${LDFLAGS}\n' \
       test_${1,,} test/test_${1,,}.o test/test_${1,,}.o >> Makefile
   fi
 }
