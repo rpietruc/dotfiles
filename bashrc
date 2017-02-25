@@ -274,6 +274,7 @@ EOF
 
 function check_main {
   cat << EOF
+#include <check.h>
 #include <stdlib.h>
 
 int main(void)
@@ -463,4 +464,3 @@ function cpp_project {
     cpp_new $1 include src
   fi
 }
-
