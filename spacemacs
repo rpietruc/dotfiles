@@ -42,6 +42,7 @@ values."
      markdown
      latex
      org
+     python
      scala
      semantic
      spell-checking
