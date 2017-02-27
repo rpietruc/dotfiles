@@ -222,12 +222,12 @@ function c_header {
 #ifndef ${1^^}_H
 #define ${1^^}_H
 
+struct _$1;
+typedef struct _$1 T$1;
+
 #if defined(__cplusplus) || defined(__cplusplus__)
 extern "C" {
 #endif
-
-  struct _$1;
-  typedef struct _$1 T$1;
 
   T$1* ${1,,}_create();
   void ${1,,}_free(T$1 *self);
