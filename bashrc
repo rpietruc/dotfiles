@@ -229,8 +229,8 @@ extern "C" {
   struct _$1;
   typedef struct _$1 T$1;
 
-  T$1* ${1,,}_constructor();
-  void ${1,,}_destructor(T$1 *self);
+  T$1* ${1,,}_create();
+  void ${1,,}_free(T$1 *self);
 
 #if defined(__cplusplus) || defined(__cplusplus__)
 }
@@ -252,7 +252,7 @@ function c_source {
 struct _$1 {
 };
 
-T$1* ${1,,}_constructor()
+T$1* ${1,,}_create()
 {
   T$1* self = (T$1*)malloc(sizeof(T$1));
   if (self) {
@@ -260,7 +260,7 @@ T$1* ${1,,}_constructor()
   return self;
 }
 
-void ${1,,}_destructor(T$1 *self)
+void ${1,,}_free(T$1 *self)
 {
   free(self);
 }
@@ -335,9 +335,9 @@ function check_source {
 
 START_TEST(test_$2)
 {
-  T$1 *self = ${1,,}_constructor();
+  T$1 *self = ${1,,}_create();
   ck_assert_msg(0 == 1, "Test should be defined");
-  ${1,,}_destructor(self);
+  ${1,,}_free(self);
 }
 END_TEST
 
@@ -450,7 +450,7 @@ function c_project {
   sed -i "s/.cpp/.c/" Makefile
   sed -i '/^LDFLAGS=/ s/$/ $(shell pkg-config --libs check)/' Makefile
   if [ ! -z $1 ]; then
-    c_new $1 constructor include src
+    c_new $1 create include src
   fi
 }
 
