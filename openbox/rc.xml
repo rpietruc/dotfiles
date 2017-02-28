@@ -408,6 +408,11 @@
         <command>remmina</command>
       </action>
     </keybind>
+    <keybind key="W-v">
+      <action name="Execute">
+        <command>virtualbox</command>
+      </action>
+    </keybind>
     <keybind key="W-space">
       <action name="ShowMenu">
         <menu>root-menu</menu>

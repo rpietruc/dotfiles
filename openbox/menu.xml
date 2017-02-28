@@ -173,6 +173,11 @@
       <command>remmina</command>
     </action>
   </item>
+  <item label="VirtualBox">
+    <action name="Execute">
+      <command>virtualbox</command>
+    </action>
+  </item>
   <item label="Openbox Configuration Manager">
     <action name="Execute">
       <command>obconf</command>
