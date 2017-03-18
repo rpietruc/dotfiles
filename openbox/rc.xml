@@ -383,9 +383,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Skype</name>
+          <name>Slack</name>
         </startupnotify>
-        <command>apulse32 skype</command>
+        <command>slack</command>
       </action>
     </keybind>
     <keybind key="W-l">

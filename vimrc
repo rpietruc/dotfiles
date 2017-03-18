@@ -24,3 +24,7 @@ au FileType cpp set sw=4 ts=4
 " git log requirement
 set textwidth=72
 
+set nocp
+filetype plugin on
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
