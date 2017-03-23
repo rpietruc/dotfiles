@@ -3,4 +3,8 @@ tint2 &
 nm-applet &
 nitrogen --restore &
 xscreensaver &
+if [ -f ~/.screenlayout/default.sh ]; then
+  ~/.screenlayout/default.sh
+fi
 setxkbmap pl
+
