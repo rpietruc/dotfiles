@@ -430,7 +430,10 @@ function cpp_new {
     if [ ! -f "$file_cpp" ]; then cpp_source $1 > $file_cpp; fi
     sed -i "s|\(^SRCS=.*\)|\1 $file_cpp|" Makefile
     mkdir -p test
-    if [ ! -f test/test_${1,,}.cpp ]; then test_main $1 > test/test_${1,,}.cpp; fi
+    if [ ! -f test/test_${1,,}.cpp ]; then
+      test_main $1 > test/test_${1,,}.cpp;
+      echo "/test_${1,,}" >> .gitignore
+    fi
     test_new $1
   fi
 }
@@ -440,11 +443,16 @@ function cpp_new {
 #
 
 function c_project {
+  echo "*.o" >> .gitignore
   if [ ! -f Makefile ]; then makemake > Makefile; fi
   mkdir -p src
   if [ ! -f src/main.c ]; then c_main > src/main.c; fi
+  echo "/main" >> .gitignore
   mkdir -p test
-  if [ ! -f test/test_main.c ]; then check_main > test/test_main.c; fi
+  if [ ! -f test/test_main.c ]; then
+    check_main > test/test_main.c;
+    echo "/test_main" >> .gitignore
+  fi
   test_new main
   sed -i 's/CC=g++/CC=gcc/' Makefile
   sed -i "s/.cpp/.c/" Makefile
@@ -455,9 +463,11 @@ function c_project {
 }
 
 function cpp_project {
+  echo "*.o" >> .gitignore
   if [ ! -f Makefile ]; then makemake > Makefile; fi
   mkdir -p src
   if [ ! -f src/main.cpp ]; then cpp_main > src/main.cpp; fi
+  echo "/main" >> .gitignore
   sed -i "/^LDFLAGS=/ s/\$/ -lboost_unit_test_framework/" Makefile
   sed -i "/^CFLAGS=/ s/\$/ -std=c++11/" Makefile
   if [ ! -z $1 ]; then
