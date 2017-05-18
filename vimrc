@@ -17,9 +17,7 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
 nnoremap <C-l> :TlistToggle<CR>
 
-au FileType c,cpp set expandtab
-au FileType c set sw=2 ts=2
-au FileType cpp set sw=4 ts=4
+au FileType c,cpp set noet ci sts=0 sw=4 ts=4 cinoptions=(0,u0,U0
 
 " git log requirement
 set textwidth=72
@@ -27,4 +25,7 @@ set textwidth=72
 set nocp
 filetype plugin on
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+if executable('gbs')
+	set makeprg=gbs
+endif
 
