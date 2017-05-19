@@ -68,7 +68,9 @@ function yf {
 function yl {
   if [[ "$1" =~ \.rpm$ ]]; then rpm -qlp "$1";
   elif $(which dpkg-query >/dev/null 2>&1); then dpkg-query -L "$@";
-  elif $(which yaourt >/dev/null 2>&1); then yaourt -Ql "$@"; fi
+  elif $(which yaourt >/dev/null 2>&1); then yaourt -Ql "$@";
+  else rpm -ql "$1";
+  fi
 }
 function yo {
   if $(which dpkg >/dev/null 2>&1); then dpkg -S "$1";
