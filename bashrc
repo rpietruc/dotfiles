@@ -10,6 +10,7 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias prettyjson='python -m json.tool'
 alias git-aliases='git config --get-regexp alias'
+alias scala-project='sbt new scala/hello-world.g8'
 
 # ex - archive extractor
 # usage: ex <file>
