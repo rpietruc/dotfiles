@@ -12,6 +12,7 @@ alias prettyjson='python -m json.tool'
 alias git-aliases='git config --get-regexp alias'
 alias scala-project='sbt new scala/hello-world.g8'
 alias java-project='gradle init --type java-application' 
+alias spring-project='curl https://start.spring.io/starter.tgz -d dependencies=web,actuator -d language=java -d type=gradle-project -d baseDir=spring-project | tar -xzvf -'
 
 # ex - archive extractor
 # usage: ex <file>
