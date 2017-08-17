@@ -36,12 +36,20 @@
       </startupnotify>
     </action>
   </item>
+  <item label="Intellij">
+    <action name="Execute">
+      <command>idea.sh</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
 </menu>
 
 <menu id="apps-net-menu" label="Internet">
   <item label="Browser">
     <action name="Execute">
-      <command>firefox</command>
+      <command>chromium</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
