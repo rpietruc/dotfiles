@@ -28,6 +28,14 @@
 </menu>
 
 <menu id="apps-games-menu" label="Games">
+  <item label="Steam">
+    <action name="Execute">
+      <command>steam</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <item label="Minecraft">
     <action name="Execute">
       <command>minecraft</command>
