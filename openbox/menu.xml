@@ -27,15 +27,18 @@
   </item>
 </menu>
 
-<menu id="apps-devel-menu" label="Development">
-  <item label="QtCreator">
+<menu id="apps-games-menu" label="Games">
+  <item label="Minecraft">
     <action name="Execute">
-      <command>qtcreator</command>
+      <command>minecraft</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
     </action>
   </item>
+</menu>
+
+<menu id="apps-devel-menu" label="Development">
   <item label="Intellij">
     <action name="Execute">
       <command>idea.sh</command>
@@ -58,14 +61,6 @@
   <item label="Mail">
     <action name="Execute">
       <command>thunderbird</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Skype">
-    <action name="Execute">
-      <command>apulse32 skype</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -147,25 +142,6 @@
   </item>
 </menu>
 
-<menu id="apps-devel-menu" label="Development">
-  <item label="QtCreator">
-    <action name="Execute">
-      <command>qtcreator</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Eclipse">
-    <action name="Execute">
-      <command>eclipse</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-</menu>
-
 <menu id="apps-graphics-menu" label="Graphics">
   <item label="Gimp">
     <action name="Execute">
@@ -192,11 +168,6 @@
 </menu>
 
 <menu id="system-menu" label="System">
-  <item label="RemoteDesktop">
-    <action name="Execute">
-      <command>remmina</command>
-    </action>
-  </item>
   <item label="VirtualBox">
     <action name="Execute">
       <command>virtualbox</command>
@@ -227,6 +198,8 @@
   <separator label="Applications" />
   <menu id="apps-term-menu"/>
   <menu id="apps-editors-menu"/>
+  <menu id="apps-devel-menu" />
+  <menu id="apps-games-menu" />
   <menu id="apps-net-menu"/>
   <menu id="apps-fileman-menu"/>
   <menu id="apps-office-menu"/>
@@ -235,11 +208,8 @@
   <separator label="System" />
   <menu id="system-menu"/>
   <separator />
-  <item label="Log Out">
-    <action name="Exit">
-      <prompt>yes</prompt>
-    </action>
-  </item>
+  <item label="Lock"> <action name="Execute"> <execute>xscreensaver-command -lock</execute> </action> </item> 
+  <item label="Log Out"> <action name="Exit"> <prompt>yes</prompt> </action> </item>
 </menu>
 
 </openbox_menu>
