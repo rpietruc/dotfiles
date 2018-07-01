@@ -14,6 +14,7 @@ alias scala-project='sbt new scala/hello-world.g8'
 alias java-project='gradle init --type java-application' 
 alias spring-project='curl https://start.spring.io/starter.tgz -d dependencies=web,actuator -d language=java -d type=gradle-project -d baseDir=spring-project | tar -xzvf -'
 alias mvn-project='mvn archetype:generate'
+alias emacs='emacs -nw'
 
 # ex - archive extractor
 # usage: ex <file>
