@@ -49,7 +49,7 @@
 <menu id="apps-devel-menu" label="Development">
   <item label="Intellij">
     <action name="Execute">
-      <command>idea.sh</command>
+      <command>idea</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -77,6 +77,14 @@
   <item label="Slack">
     <action name="Execute">
       <command>slack</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Skype">
+    <action name="Execute">
+      <command>skypeforlinux</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>

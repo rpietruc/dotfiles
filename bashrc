@@ -15,6 +15,7 @@ alias java-project='gradle init --type java-application'
 alias spring-project='curl https://start.spring.io/starter.tgz -d dependencies=web,actuator -d language=java -d type=gradle-project -d baseDir=spring-project | tar -xzvf -'
 alias mvn-project='mvn archetype:generate'
 alias emacs='emacs -nw'
+alias vertx-project='mvn io.fabric8:vertx-maven-plugin:1.0.13:setup -DvertxVersion=3.5.2'
 
 # ex - archive extractor
 # usage: ex <file>
