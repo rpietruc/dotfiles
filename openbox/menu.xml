@@ -47,6 +47,14 @@
 </menu>
 
 <menu id="apps-devel-menu" label="Development">
+  <item label="QtCreator">
+    <action name="Execute">
+      <command>qtcreator</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <item label="Intellij">
     <action name="Execute">
       <command>idea</command>
@@ -55,10 +63,18 @@
       </startupnotify>
     </action>
   </item>
+  <item label="PyCharm">
+    <action name="Execute">
+      <command>pycharm</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
 </menu>
 
 <menu id="apps-net-menu" label="Internet">
-  <item label="Browser">
+  <item label="Chromium">
     <action name="Execute">
       <command>chromium</command>
       <startupnotify>
@@ -66,9 +82,9 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Mail">
+  <item label="Firefox">
     <action name="Execute">
-      <command>thunderbird</command>
+      <command>firefox</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>

@@ -356,9 +356,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Mail</name>
+          <name>Firefox</name>
         </startupnotify>
-        <command>thunderbird</command>
+        <command>firefox</command>
       </action>
     </keybind>
     <keybind key="W-a">
@@ -370,6 +370,15 @@
         <command>xterm -e alsamixer</command>
       </action>
     </keybind>
+    <keybind key="W-c">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>QtCreator</name>
+        </startupnotify>
+        <command>qtcreator</command>
+      </action>
+    </keybind>
     <keybind key="W-i">
       <action name="Execute">
         <startupnotify>
@@ -377,6 +386,15 @@
           <name>Intellij</name>
         </startupnotify>
         <command>idea</command>
+      </action>
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>PyCharm</name>
+        </startupnotify>
+        <command>pycharm</command>
       </action>
     </keybind>
     <keybind key="W-s">
