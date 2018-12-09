@@ -71,6 +71,22 @@
       </startupnotify>
     </action>
   </item>
+  <item label="Stm32CubeMX">
+    <action name="Execute">
+      <command>stm32cubemx</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Sw4Stm32">
+    <action name="Execute">
+      <command>sw4stm32</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
 </menu>
 
 <menu id="apps-net-menu" label="Internet">
@@ -101,6 +117,14 @@
   <item label="Skype">
     <action name="Execute">
       <command>skypeforlinux</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Dropbox">
+    <action name="Execute">
+      <command>dropbox</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
