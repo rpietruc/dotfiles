@@ -10,7 +10,6 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias prettyjson='python -m json.tool'
 alias git-aliases='git config --get-regexp alias'
-alias scala-project='sbt new scala/hello-world.g8'
 alias java-project='gradle init --type java-application' 
 alias spring-project='curl https://start.spring.io/starter.tgz -d dependencies=web,actuator -d language=java -d type=gradle-project -d baseDir=spring-project | tar -xzvf -'
 alias mvn-project='mvn archetype:generate'
@@ -483,3 +482,14 @@ function cpp_project {
     cpp_new $1 include src
   fi
 }
+
+function scala-minimal {
+  if [ "$#" -ne 2 ]; then
+    echo "usage: scala-minimal <project_name> <scala_version>"
+  else
+    mkdir "$1" && echo "scalaVersion := $2" >> "$1/build.sbt"
+  fi
+}
+alias scala-hello-world='sbt new scala/hello-world.g8'
+alias scala-cats='sbt new underscoreio/cats-seed.g8'
+
