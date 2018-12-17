@@ -487,7 +487,7 @@ function scala-minimal {
   if [ "$#" -ne 2 ]; then
     echo "usage: scala-minimal <project_name> <scala_version>"
   else
-    mkdir "$1" && echo "scalaVersion := $2" >> "$1/build.sbt"
+    mkdir "$1" && echo "scalaVersion := \"$2\"" >> "$1/build.sbt"
   fi
 }
 alias scala-hello-world='sbt new scala/hello-world.g8'
