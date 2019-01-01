@@ -1,9 +1,8 @@
 xset -b
 tint2 &
 nitrogen --restore &
-xscreensaver &
+nm-applet --no-agent &
 if [ -f ~/.screenlayout/default.sh ]; then
   ~/.screenlayout/default.sh
 fi
 setxkbmap pl
-
