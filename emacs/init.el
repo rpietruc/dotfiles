@@ -22,7 +22,7 @@ There are two things you can do about this warning:
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (evil w3 ensime))))
+ '(package-selected-packages (quote (ensime evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -33,3 +33,6 @@ There are two things you can do about this warning:
 
 (require 'evil)
   (evil-mode 1)
+
+;; guess default directory in split mode
+(setq dired-dwim-target t)
