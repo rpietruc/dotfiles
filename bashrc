@@ -44,50 +44,50 @@ ex ()
 
 function yu {
   if $(which apt-get >/dev/null 2>&1); then sudo apt-get update && sudo apt-get upgrade;
-  elif $(which yaourt >/dev/null 2>&1); then yaourt -Syu; fi
+  elif $(which yay >/dev/null 2>&1); then yay -Syu; fi
 }
 function ya { pacman -Qqdt | sed ':a;N;$!ba;s/\n/ /g'; }
 function yc {
   if $(which apt-get >/dev/null 2>&1); then sudo apt-get autoremove;
-  elif $(which yaourt >/dev/null 2>&1); then yaourt -R $(echo $(ya)); fi
+  elif $(which yay >/dev/null 2>&1); then yay -R $(echo $(ya)); fi
 }
 function ys {
   if $(which apt-cache >/dev/null 2>&1); then apt-cache search "$@";
-  elif $(which yaourt >/dev/null 2>&1); then yaourt "$@"; fi
+  elif $(which yay >/dev/null 2>&1); then yay "$@"; fi
 }
 function yr {
   if $(which apt-get >/dev/null 2>&1); then sudo apt-get remove "$@";
-  elif $(which yaourt >/dev/null 2>&1); then yaourt -R "$@"; fi
+  elif $(which yay >/dev/null 2>&1); then yay -R "$@"; fi
 }
 function yi {
   if $(which apt-get >/dev/null 2>&1); then sudo apt-get install "$@";
-  elif $(which yaourt >/dev/null 2>&1); then yaourt -S "$@"; fi
+  elif $(which yay >/dev/null 2>&1); then yay -S "$@"; fi
 }
 function yf {
     if [[ "$1" =~ \.rpm$ ]]; then
         rpm -Uvh "$1"; # --nodeps to force dependency conflict
     elif [[ "$1" =~ \.pkg.tar.xz$ ]]; then
-        yaourt -U "$1";
+        yay -U "$1";
     fi
 }
 function yl {
   if [[ "$1" =~ \.rpm$ ]]; then rpm -qlp "$1";
   elif $(which dpkg-query >/dev/null 2>&1); then dpkg-query -L "$@";
-  elif $(which yaourt >/dev/null 2>&1); then yaourt -Ql "$@";
+  elif $(which yay >/dev/null 2>&1); then yay -Ql "$@";
   else rpm -ql "$1";
   fi
 }
 function yo {
   if $(which dpkg >/dev/null 2>&1); then dpkg -S "$1";
-  elif $(which yaourt >/dev/null 2>&1); then yaourt -Qo "$1";
+  elif $(which yay >/dev/null 2>&1); then yay -Qo "$1";
   else rpm -qf "$1";
   fi
 }
 function yg {
   if $(which apt-get >/dev/null 2>&1); then apt-get source "$1";
-  elif $(which yaourt >/dev/null 2>&1); then yaourt -G "$1"; fi
+  elif $(which yay >/dev/null 2>&1); then yay -G "$1"; fi
 }
-function pkg_ver { yaourt -Q "$1" | sed "s/\(.*\) \(1\?:\?\)\(.*\)-1/\3/"; }
+function pkg_ver { yay -Q "$1" | sed "s/\(.*\) \(1\?:\?\)\(.*\)-1/\3/"; }
 
 # pacman
 function mirrorlist_update {
