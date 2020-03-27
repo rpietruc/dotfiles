@@ -496,5 +496,5 @@ alias scala-akka='sbt new akka/akka-scala-seed.g8'
 alias scala-akka-http='sbt new akka/akka-http-quickstart-scala.g8'
 
 alias gke_start='gcloud container clusters get-credentials my-first-cluster-1 --zone europe-west2-c --project searchpy2'
-source <(kubectl completion bash)
+# source <(kubectl completion bash)
 
