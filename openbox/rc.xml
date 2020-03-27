@@ -374,9 +374,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>QtCreator</name>
+          <name>Chromium</name>
         </startupnotify>
-        <command>qtcreator</command>
+        <command>chromium</command>
       </action>
     </keybind>
     <keybind key="W-i">
@@ -401,9 +401,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Slack</name>
+          <name>Messenger</name>
         </startupnotify>
-        <command>slack</command>
+        <command>caprine</command>
       </action>
     </keybind>
     <keybind key="W-q">
