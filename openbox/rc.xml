@@ -343,15 +343,6 @@
         <command>terminator</command>
       </action>
     </keybind>
-    <keybind key="W-n">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Browser</name>
-        </startupnotify>otify>
-        <command>chromium</command>
-      </action>action>
-    </keybind>>
     <keybind key="W-m">
       <action name="Execute">
         <startupnotify>
