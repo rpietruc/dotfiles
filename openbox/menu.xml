@@ -106,6 +106,22 @@
       </startupnotify>
     </action>
   </item>
+  <item label="Thunderbird">
+    <action name="Execute">
+      <command>thunderbird</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Messenger">
+    <action name="Execute">
+      <command>caprine</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <item label="Slack">
     <action name="Execute">
       <command>slack</command>
@@ -213,6 +229,12 @@
   <item label="Wallpaper Config">
     <action name="Execute">
       <command>nitrogen</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="ARandR">
+    <action name="Execute">
+      <command>arandr</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
