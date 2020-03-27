@@ -356,6 +356,15 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
+          <name>Thunderbird</name>
+        </startupnotify>
+        <command>thunderbird</command>
+      </action>
+    </keybind>
+    <keybind key="W-n">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
           <name>Firefox</name>
         </startupnotify>
         <command>firefox</command>
