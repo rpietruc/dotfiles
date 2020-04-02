@@ -130,6 +130,14 @@
       </startupnotify>
     </action>
   </item>
+  <item label="Zoom">
+    <action name="Execute">
+      <command>zoom</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <item label="Slack">
     <action name="Execute">
       <command>slack</command>
