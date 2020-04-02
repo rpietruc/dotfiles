@@ -397,6 +397,15 @@
         <command>pycharm</command>
       </action>
     </keybind>
+    <keybind key="W-o">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Octave</name>
+        </startupnotify>
+        <command>octave --gui</command>
+      </action>
+    </keybind>
     <keybind key="W-s">
       <action name="Execute">
         <startupnotify>
