@@ -415,6 +415,15 @@
         <command>caprine</command>
       </action>
     </keybind>
+    <keybind key="W-z">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Messenger</name>
+        </startupnotify>
+        <command>zoom</command>
+      </action>
+    </keybind>
     <keybind key="W-q">
       <action name="Exit">
         <prompt>yes</prompt>
