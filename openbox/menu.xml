@@ -71,6 +71,14 @@
       </startupnotify>
     </action>
   </item>
+  <item label="Octave">
+    <action name="Execute">
+      <command>octave --gui</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <item label="Stm32CubeMX">
     <action name="Execute">
       <command>stm32cubemx</command>
