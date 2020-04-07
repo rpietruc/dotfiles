@@ -162,6 +162,14 @@
       </startupnotify>
     </action>
   </item>
+  <item label="Trello">
+    <action name="Execute">
+      <command>trello</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
 </menu>
 
 <menu id="apps-fileman-menu" label="File Managers">
