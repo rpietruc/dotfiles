@@ -22,7 +22,10 @@ There are two things you can do about this warning:
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (ensime evil))))
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(custom-enabled-themes (quote (wombat)))
+ '(package-selected-packages (quote (csharp-mode ensime evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -36,3 +39,7 @@ There are two things you can do about this warning:
 
 ;; guess default directory in split mode
 (setq dired-dwim-target t)
+
+(autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
+(setq auto-mode-alist
+   (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
