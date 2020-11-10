@@ -5,4 +5,7 @@ nm-applet --no-agent &
 if [ -f ~/.screenlayout/default.sh ]; then
   ~/.screenlayout/default.sh
 fi
+keychain ~/.ssh/id_rsa
+[ -f ~/.keychain/$HOSTNAME-sh ] && . ~/.keychain/$HOSTNAME-sh 2>/dev/null
+[ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null
 setxkbmap pl

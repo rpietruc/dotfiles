@@ -338,9 +338,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Terminator</name>
+          <name>Xterm</name>
         </startupnotify>
-        <command>terminator</command>
+        <command>xterm</command>
       </action>
     </keybind>
     <keybind key="W-m">
@@ -434,9 +434,9 @@
         <command>xscreensaver-command -lock</command>
       </action>
     </keybind>
-    <keybind key="W-r">
+    <keybind key="W-x">
       <action name="Execute">
-        <command>remmina</command>
+        <command>xfce4-appfinder</command>
       </action>
     </keybind>
     <keybind key="W-v">
