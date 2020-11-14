@@ -338,9 +338,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Xterm</name>
+          <name>Terminator</name>
         </startupnotify>
-        <command>xterm</command>
+        <command>terminator</command>
       </action>
     </keybind>
     <keybind key="W-m">
