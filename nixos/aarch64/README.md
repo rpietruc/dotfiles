@@ -19,6 +19,7 @@ sudo resize2fs /dev/disk/by-label/NIXOS_SD
 
 ```sh
 sudo nixos-generate-config
+echo "boot.kernelPackages = pkgs.linuxPackages_5_4;" >> /etc/nixos/configuration.nix
 sudo nix-channel --update
 sudo nixos-rebuild switch
 ```
