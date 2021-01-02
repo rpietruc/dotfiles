@@ -24,4 +24,6 @@ dependencies:
     - ttkthemes
 ^D
 conda env update --file environment.yml
+conda activate myenv
+conda deactivate
 ```
