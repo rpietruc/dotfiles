@@ -28,3 +28,9 @@ conda env update --file environment.yml
 conda install -c conda-forge pyside2
 conda deactivate
 ```
+
+## Qt
+
+### QtCreator
+
+* Make sure in Kits configuration `g++` path is in `/run/current-system/sw/bin`.
