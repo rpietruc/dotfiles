@@ -39,6 +39,10 @@ conda deactivate
 
 ## Qt
 
+```sh
+nix-env -qA nixos.qt514.full qtcreator
+```
+
 ### QtCreator
 
 * Make sure in Kits configuration `g++` path is in `/run/current-system/sw/bin`.
