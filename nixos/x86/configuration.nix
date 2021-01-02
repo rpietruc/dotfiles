@@ -52,7 +52,7 @@
   services.xserver = {
     enable = true;
     layout = "pl";
-    videoDrivers = [ "nouveau" ];
+    videoDrivers = [ "nvidia" ];
 
     desktopManager = {
       xterm.enable = false;
@@ -95,13 +95,9 @@
   # ];
   environment.systemPackages = with pkgs; [
     os-prober
-    wget vim emacs git
-    firefox chromium
-    ffmpeg
-    qt514.full gnumake gcc gdb cmake qtcreator
-    htop
-    lightdm lightdm-tiny-greeter i3
-    xorg.xorgserver xorg.xf86videonouveau xorg.xinit
+    wget vim emacs git htop
+    firefox chromium ffmpeg
+    gnumake gcc gdb cmake
     rxvt_unicode
   ];
   environment.pathsToLink = [ "/libexec" ];
@@ -135,4 +131,7 @@
   system.stateVersion = "20.09"; # Did you read the comment?
 
   nix.trustedUsers = [ "root" "lori" ];
+
+  nixpkgs.config.allowUnfree = true;
 }
+
