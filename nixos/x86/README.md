@@ -13,6 +13,7 @@ conda init bash
 
 ```sh
 conda create -n myenv ipython numpy
+conda activate myenv
 cat > environment.yml
 name: myenv
 dependencies:
@@ -24,6 +25,6 @@ dependencies:
     - ttkthemes
 ^D
 conda env update --file environment.yml
-conda activate myenv
+conda install -c conda-forge pyside2
 conda deactivate
 ```
