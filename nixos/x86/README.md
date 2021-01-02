@@ -1,5 +1,13 @@
 # NixOS x86
 
+## Automount
+
+```sh
+nix-env -iA nixos.udisks
+udisksctl mount -b /dev/sdc1
+udisksctl unmount -b /dev/sdc1
+```
+
 ## Conda
 
 ```sh
