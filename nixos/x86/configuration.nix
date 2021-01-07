@@ -96,8 +96,8 @@
   environment.systemPackages = with pkgs; [
     os-prober
     wget vim emacs git htop
-    firefox chromium ffmpeg
-    gnumake gcc gdb cmake
+    firefox chromium ffmpeg-full
+    gnumake gcc gdb cmake conda
     rxvt_unicode
   ];
   environment.pathsToLink = [ "/libexec" ];
