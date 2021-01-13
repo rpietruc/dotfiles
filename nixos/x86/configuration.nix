@@ -101,7 +101,8 @@
     wget vim emacs git htop file unzip
     firefox chromium ffmpeg-full
     gnumake gcc gdb cmake conda
-    rxvt_unicode picocom udisks
+    rxvt_unicode picocom
+    udisks usbutils jmtpfs
   ];
   environment.pathsToLink = [ "/libexec" ];
 
