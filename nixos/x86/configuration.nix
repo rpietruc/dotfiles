@@ -15,6 +15,7 @@
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     loader.grub.useOSProber = true;
+    kernel.sysctl."net.ipv4.ip_forward" = true;
     supportedFilesystems = [ "ntfs" ];
   };
   # networking.hostName = "nixos"; # Define your hostname.
@@ -87,6 +88,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
   };
+  users.extraGroups.vboxusers.members = [ "lori" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -96,10 +98,10 @@
   # ];
   environment.systemPackages = with pkgs; [
     os-prober
-    wget vim emacs git htop
+    wget vim emacs git htop file unzip
     firefox chromium ffmpeg-full
     gnumake gcc gdb cmake conda
-    rxvt_unicode udisks
+    rxvt_unicode picocom udisks
   ];
   environment.pathsToLink = [ "/libexec" ];
 
@@ -135,6 +137,9 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  virtualisation.docker.enable = true;
+  virtualisation = {
+    docker.enable = true;
+    virtualbox.host.enable = true;
+  };
 }
 
