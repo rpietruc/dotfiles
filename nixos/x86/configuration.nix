@@ -15,6 +15,7 @@
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     loader.grub.useOSProber = true;
+    supportedFilesystems = [ "ntfs" ];
   };
   # networking.hostName = "nixos"; # Define your hostname.
   networking.hostName = "nixos"; # Define your hostname.
@@ -84,7 +85,7 @@
   # };
   users.users.lori = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
   };
 
   # List packages installed in system profile. To search, run:
@@ -98,7 +99,7 @@
     wget vim emacs git htop
     firefox chromium ffmpeg-full
     gnumake gcc gdb cmake conda
-    rxvt_unicode
+    rxvt_unicode udisks
   ];
   environment.pathsToLink = [ "/libexec" ];
 
@@ -133,5 +134,7 @@
   nix.trustedUsers = [ "root" "lori" ];
 
   nixpkgs.config.allowUnfree = true;
+
+  virtualisation.docker.enable = true;
 }
 
