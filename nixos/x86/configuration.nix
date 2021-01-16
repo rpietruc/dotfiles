@@ -99,13 +99,14 @@
   # ];
   environment.systemPackages = with pkgs; [
     os-prober
-    wget vim emacs git htop file unzip
+    wget vim emacs-nox gitAndTools.gitFull htop file unzip
     firefox chromium ffmpeg-full
     gnumake gcc gdb cmake conda
     rxvt_unicode picocom
     udisks usbutils jmtpfs
   ];
   environment.pathsToLink = [ "/libexec" ];
+  environment.variables.EDITOR = "vim";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
