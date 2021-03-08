@@ -99,7 +99,7 @@
   # ];
   environment.systemPackages = with pkgs; [
     os-prober
-    wget vim emacs-nox gitAndTools.gitFull htop file unzip
+    wget vim emacs gitAndTools.gitFull htop file unzip
     firefox chromium ffmpeg-full
     gnumake gcc gdb cmake conda
     rxvt_unicode picocom
