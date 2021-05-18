@@ -18,3 +18,4 @@
  ;; If there is more than one, they won't work right.
  )
 (add-hook 'python-mode-hook 'jedi:setup)
+(require 'magit)
