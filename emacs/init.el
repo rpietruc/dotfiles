@@ -19,3 +19,4 @@
  )
 (add-hook 'python-mode-hook 'jedi:setup)
 (require 'magit)
+(setq inhibit-splash-screen t)
