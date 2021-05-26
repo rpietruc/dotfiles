@@ -8,7 +8,7 @@
  '(indent-tabs-mode nil)
  '(package-archives
    '(("gnu" . "https://elpa.gnu.org/packages/")
-     ("melpa-stable" . "http://stable.melpa.org/packages/")))
+     ("melpa" . "http://melpa.org/packages/")))
  '(package-selected-packages
    '(jedi py-isort python treemacs-projectile ac-haskell-process haskell-snippets sbt-mode lsp-metals magit scala-mode qml-mode treemacs haskell-mode)))
 (custom-set-faces
