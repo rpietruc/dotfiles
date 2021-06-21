@@ -1,0 +1,6 @@
+URxvt*.background : #000000
+URxvt*.foreground : #AFAFAF
+xterm*background: black
+xterm*foreground: lightgray
+URxvt.perl-ext-common: selection-to-clipboard
+
