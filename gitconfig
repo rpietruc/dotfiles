@@ -1,3 +1,10 @@
 [alias]
 	root = rev-parse --show-toplevel
+[include]
+	path = ~/build/gitkurwa/config
+[user]
+	email = pietruchr@gmail.com
+	name = Rafal Pietruch
+[pull]
+	ff = only
 
